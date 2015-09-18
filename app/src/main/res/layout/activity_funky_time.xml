@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".funky_time"
+    android:id="@+id/funky_time">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONNECT"
+        android:id="@+id/connect_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="connect"
+        android:background="#a435e07e" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/error_message"
+        android:layout_alignTop="@+id/connect_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/funky_time_text"
+        android:layout_below="@+id/connect_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="6sp"
+        android:typeface="monospace"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_zone_field"
+        android:hint="Enter your time zone"
+        android:visibility="invisible"
+        android:layout_below="@+id/connect_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submit_button"
+        android:layout_alignBottom="@+id/time_zone_field"
+        android:layout_toRightOf="@+id/time_zone_field"
+        android:layout_toEndOf="@+id/time_zone_field"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:onClick="submit_button"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
